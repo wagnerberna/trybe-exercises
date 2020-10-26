@@ -1,8 +1,8 @@
 let a = 10;
 let b = 5;
 let c = 15;
-
 let resultado;
+
 // 01.Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas variáveis, a e b, definidas no começo com os valores que serão operados. Faça programas para:
 console.log("Exercício01");
 console.log(a+b);
@@ -89,6 +89,56 @@ switch (pecaXadrez) {
         console.log ("Esta não é o nome de uma peça de xadrez")
         break;
 }
-//07.
+/*07.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+    Porcentagem >= 90 -> A
+    Porcentagem >= 80 -> B
+    Porcentagem >= 70 -> C
+    Porcentagem >= 60 -> D
+    Porcentagem >= 50 -> E
+    Porcentagem < 50 -> F */
+console.log("Exercício07");
+let nota = 45;
+if (nota >= 90) {
+    nota = "A";
+    console.log("nota: ", nota);
+} else if (nota >= 80) {
+    nota = "B";
+    console.log("nota: ", nota);
+} else if (nota >= 70) {
+    nota = "C";
+    console.log("nota: ", nota);
+} else if (nota >= 60) {
+    nota = "D";
+    console.log("nota: ", nota);
+} else if (nota >= 50) {
+    nota = "E";
+    console.log("nota: ", nota);
+} else {
+    nota = "F";
+    console.log("nota: ", nota);
+} 
+//08.Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+//    Bonus: use somente um if.
+
+console.log("Exercício08");
+if ((a % 2) === 0 || (b % 2) === 0 || (c % 2) === 0) {
+    resultado = true;
+    console.log("Um dos núméros é par", resultado);
+} else {
+    resultado = false;
+    console.log("Nenhum núméros é par", resultado);
+}
+
+//09.Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+//    Bonus: use somente um if.
+
+console.log("Exercício09");
+if ((a % 2) !== 0 || (b % 2) !== 0 || (c % 2) !== 0) {
+    resultado = true;
+    console.log("Um dos núméros é ímpar", resultado);
+} else {
+    resultado = false;
+    console.log("Nenhum núméros é ímpar", resultado);
+}
 
 
