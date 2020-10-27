@@ -65,3 +65,16 @@ for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
 console.log(menorValor);
 
 //08.
+console.log("Exercício 08 criar vetor");
+let numeros = [];
+for (let count = 1; count <= 25; count+=1) {
+    numeros.push(count);
+}
+console.log(numeros);
+
+//09.
+console.log("resultado vetor anterior dividido por 2");
+for(let count = 0; count < numeros.length; count += 1) {
+    let resultadoDivisao = numeros[count] / 2;
+    console.log(resultadoDivisao);
+}
