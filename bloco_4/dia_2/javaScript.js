@@ -37,4 +37,16 @@ for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
 }
 console.log(maiorNumero);
 
-//06
+//06.
+console.log("Exercício 06 valores ímpar do vetor");
+let numImpar = []
+for (let count = 0; count < numbers.length; count +=1) {
+    if (numbers[count] % 2 !== 0) {
+        numImpar.push(numbers[count]);
+    }
+}
+if (numImpar.length == 0) {
+    console.log("Não existem números ímpares nesse vetor");
+} else {
+console.log(numImpar);
+}
