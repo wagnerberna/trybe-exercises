@@ -17,4 +17,5 @@ console.log("Exercício 03 média dos valores");
     let mediaVetor;
     mediaVetor = resultadoSoma / numbers.length;
     console.log(mediaVetor);
-    
+//04.
+console.log("Exercício 04 média dos valores");
