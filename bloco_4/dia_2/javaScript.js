@@ -18,4 +18,23 @@ console.log("Exercício 03 média dos valores");
     mediaVetor = resultadoSoma / numbers.length;
     console.log(mediaVetor);
 //04.
-console.log("Exercício 04 média dos valores");
+console.log("Exercício 04 maior ou menor e igual a 20");
+if (mediaVetor > 20) {
+    console.log("Maior que 20");
+} else {
+    console.log("menor ou igual a 20");
+}
+//05.
+console.log("Exercício 05 maior valor do vetor");
+let maiorNumero = 0;
+for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
+    let numComparar = numbers[numAtual];
+    for (let count = 0; count < numbers.length; count += 1) {
+        if (numComparar >= numbers[count] && numComparar >= maiorNumero) {
+            maiorNumero = numComparar;
+        }
+    }
+}
+console.log(maiorNumero);
+
+//06
