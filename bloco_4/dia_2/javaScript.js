@@ -50,3 +50,18 @@ if (numImpar.length == 0) {
 } else {
 console.log(numImpar);
 }
+
+//07.
+console.log("Exercício 07 menor valor do vetor");
+let menorValor = 1000;
+for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
+    let numCompara = numbers[numAtual];
+    for(let count = 0; count < numbers.length; count += 1) {
+        if (numCompara <= numbers[count] && numCompara <= menorValor) {
+            menorValor = numCompara;
+        }
+    }
+}
+console.log(menorValor);
+
+//08.
