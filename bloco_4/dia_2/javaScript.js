@@ -80,33 +80,27 @@ for(let count = 0; count < numeros.length; count += 1) {
 }
 
 //Bonus 01:
-let ordemCrescente = [];
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 console.log("Exercício B01 Ordenar vetor ordem Crescente");
-ordemCrescente = numbers.sort();
-numbers.sort();
+numbers.sort((a, b) => a - b); 
 console.log(numbers);
-console.log(ordemCrescente);
 
 //Bonus 02:
 console.log("Exercício B02 Ordenar vetor ordem Decrescente");
-let ordemDecrescente = [];
-ordemDecrescente = numbers.reverse();
-numbers.reverse();
+numbers.sort((a, b) => b - a); 
 console.log(numbers);
-console.log(ordemDecrescente);
-console.log("fim");
 
-/*
-let ordemCrescente = [];
-for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
-    let numComparar = numbers[numAtual];
-    let numAddVetor = 0;
-    for (let count = 0; count < numbers.length; count += 1) {
-        if (numComparar <= numbers[count]) {
-            numAddVetor = numComparar;
-        }
+//Bonus 03:
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+console.log("Exercício B03 Multiplicar itens do vetor pelo próximo número");
+let vetorMultiplicado = [];
+let resultadoMultiplicacao;
+for (count = 0; count < numbers.length; count += 1) {
+    if (count == numbers.length -1) {
+        vetorMultiplicado.push((numbers[count]*2));
+    } else {
+        vetorMultiplicado.push((numbers[count])*(numbers[count + 1]));
     }
-ordemCrescente.push(numComparar);
 }
-console.log(ordemCrescente);
-*/
+console.log (vetorMultiplicado);
+console.log("fim");
