@@ -13,7 +13,7 @@ for (let count = 0; count < numbers.length; count += 1) {
 console.log(resultadoSoma);
 
 //03.
-console.log("Exercício 03 média dos valores");
+console.log("Exercício 03 média dos valores do vetor");
     let mediaVetor;
     mediaVetor = resultadoSoma / numbers.length;
     console.log(mediaVetor);
@@ -25,7 +25,7 @@ if (mediaVetor > 20) {
     console.log("menor ou igual a 20");
 }
 //05.
-console.log("Exercício 05 maior valor do vetor");
+console.log("Exercício 05 localizar maior valor do vetor");
 let maiorNumero = 0;
 for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
     let numComparar = numbers[numAtual];
@@ -52,7 +52,7 @@ console.log(numImpar);
 }
 
 //07.
-console.log("Exercício 07 menor valor do vetor");
+console.log("Exercício 07 localizar menor valor do vetor");
 let menorValor = 1000;
 for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
     let numCompara = numbers[numAtual];
@@ -65,7 +65,7 @@ for (let numAtual = 0; numAtual < numbers.length; numAtual += 1) {
 console.log(menorValor);
 
 //08.
-console.log("Exercício 08 criar vetor");
+console.log("Exercício 08 criar vetor de 1 a 25");
 let numeros = [];
 for (let count = 1; count <= 25; count+=1) {
     numeros.push(count);
@@ -78,3 +78,29 @@ for(let count = 0; count < numeros.length; count += 1) {
     let resultadoDivisao = numeros[count] / 2;
     console.log(resultadoDivisao);
 }
+
+//Bonus 01:
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+console.log("Exercício B01 Ordenar vetor ordem Crescente");
+numbers.sort((a, b) => a - b); 
+console.log(numbers);
+
+//Bonus 02:
+console.log("Exercício B02 Ordenar vetor ordem Decrescente");
+numbers.sort((a, b) => b - a); 
+console.log(numbers);
+
+//Bonus 03:
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+console.log("Exercício B03 Multiplicar itens do vetor pelo próximo número");
+let vetorMultiplicado = [];
+let resultadoMultiplicacao;
+for (count = 0; count < numbers.length; count += 1) {
+    if (count == numbers.length -1) {
+        vetorMultiplicado.push((numbers[count]*2));
+    } else {
+        vetorMultiplicado.push((numbers[count])*(numbers[count + 1]));
+    }
+}
+console.log (vetorMultiplicado);
+console.log("fim");
