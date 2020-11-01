@@ -32,3 +32,23 @@ let info2 = {
   recorrente:"Sim",
 };
 console.table(info2);
+
+//6 Número Primo:
+console.log("06 Verificação de número primo: ");
+function numerosPrimos(numTestar) {
+     let resultado = false;
+     for (let numeroAtual = 2; numeroAtual < numTestar; numeroAtual += 1) {
+        let divisores = 0;
+         for (let divisor = 2; divisor < numeroAtual; divisor+= 1) {
+             if (numeroAtual % divisor === 0) {
+                 divisores += 1; 
+             }
+         }
+         if (divisores === 1) {
+             resultado = true;
+         }
+     }
+     return primos;
+ }
+ let numprimo = 7;
+ numerosPrimos(numPrimo);
