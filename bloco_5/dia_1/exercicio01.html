@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="javaScript.js"></script>
 </head>
 <body>
     
@@ -14,9 +13,9 @@
     <p id="second-paragraph">Segundo parágrafo!</p>
 
     <h2 class="segundoTitulo">Título</h2>
-    <p>Dê uma cor para este parágrafo!</p>
-    <h4>Subtítulo</h4>
-    <p>Segundo parágrafo!</p>
+    <p class="segundoTitulo">Dê uma cor para este parágrafo!</p>
+    <h4 class="segundoTitulo">Subtítulo</h4>
+    <p class="segundoTitulo">Segundo parágrafo!</p>
 
     <script>
         let paragraph = document.getElementById('paragraph');
@@ -33,10 +32,13 @@
         let titulo2 = document.getElementsByClassName('segundoTitulo');
         titulo2[0].style.color = 'orange';
         titulo2[0].innerText = 'Dexter';
-        console.log(titulo2);
-        console.log(document.getElementsByClassName('segundoTitulo')[0].innerText);
-        
+        titulo2[1].style.color = 'red';
+        titulo2[1].innerText = 'True Blood';
 
+        let subtitulotag = document.getElementsByTagName('h4');
+        subtitulotag[0].style.background = 'yellow';
+        subtitulotag[1].style.background = 'green';
+        subtitulotag[1].innerHTML = 'Vampiros';
 
         
 
