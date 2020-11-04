@@ -48,20 +48,34 @@
             novoTexto[0].innerHTML = texto;
         }
         alterarTextoTagP("Morando na Praia!!!");
-        
+
+        //02.
+        function mudaCorQuadradoTotal () {
+            let quadrado = document.getElementsByClassName('main-content');
+            quadrado[0].style.background = "rgb(76,164,109)";
+        }
+        mudaCorQuadradoTotal()
+
+        //03.
+            function mudaCorQuadradoCentro() {
+                let quadrado = document.getElementsByClassName('center-content');
+                quadrado[0].style.background = "white";
+            }
+            mudaCorQuadradoCentro()
+
+        //04. Corrigir texto tag h1
+        function corrigeTexto(novoTexto) {
+            let texto = document.getElementsByTagName('h1');
+            texto[0].innerHTML = novoTexto;
+        };
+        corrigeTexto('Exercício 5.1 - JavaScript');
+
         //05. Alterar Texto para maiúsculo.
         function textoMaiusculoTagP(){
             let maiusculo = document.getElementsByTagName('p');
             maiusculo[0].innerHTML = maiusculo[0].innerHTML.toUpperCase();
         }
         textoMaiusculoTagP();
-
-        //04. Corrigir texto tag h1
-        function corrigeTexto(novoTexto){
-            let texto = document.getElementsByTagName('h1');
-            texto[0].innerHTML = novoTexto;
-        };
-        corrigeTexto('Exercício 5.1 - JavaScript');
 
         //06. Exibir TAGs console
         function exibeTagsP() {
@@ -72,13 +86,7 @@
        }
         exibeTagsP()
 
-        //02.
-
-        //03.
-
-
         
-
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
