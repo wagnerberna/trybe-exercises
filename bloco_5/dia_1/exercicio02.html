@@ -42,6 +42,34 @@
         </div>
     </div>
     <script>
+        //01. Altera Texto
+        function alterarTextoTagP(texto) {
+            let novoTexto = document.getElementsByTagName('p');
+            novoTexto[0].innerHTML = texto;
+        }
+        alterarTextoTagP("Morando na Praia!!!");
+        
+        //05. Alterar Texto para maiúsculo.
+        function textoMaiusculoTagP(){
+            let maiusculo = document.getElementsByTagName('p');
+            maiusculo[0].innerHTML = maiusculo[0].innerHTML.toUpperCase();
+        }
+        textoMaiusculoTagP();
+
+        //04. Corrigir texto tag h1
+        function corrigeTexto(novoTexto){
+            let texto = document.getElementsByTagName('h1');
+            texto[0].innerHTML = novoTexto;
+        };
+        corrigeTexto('Exercício 5.1 - JavaScript');
+
+        //02.
+
+        //03.
+
+
+        
+
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
