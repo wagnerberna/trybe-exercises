@@ -63,6 +63,15 @@
         };
         corrigeTexto('Exercício 5.1 - JavaScript');
 
+        //06. Exibir TAGs console
+        function exibeTagsP() {
+            let textoTagsP = document.getElementsByTagName('p');
+            for (let count = 0; count < textoTagsP.length; count += 1) {
+                console.log(textoTagsP[count].innerHTML);
+            }
+       }
+        exibeTagsP()
+
         //02.
 
         //03.
