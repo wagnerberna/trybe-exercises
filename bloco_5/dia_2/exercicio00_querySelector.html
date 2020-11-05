@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <h1>G1 paiDoPai</h1>
+        <div id="pai">
+            <h1>G2 pai</h1>
+            <div id="primeiroFilho"></div>
+                <h2>G3.1 primeiroFilho</h2>
+            <div id="elementoOndeVoceEsta">
+                <p>elementoOndeVoceEsta</p>
+                <div id="primeiroFilhoDoFilho"></div>
+                    <h3>G4.1 primeiroFilhoDoFilho</h3>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+                    <h3>G4.2 segundoEUltimoFilhoDoFilho</h3>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+                <h2>G3.2 terceiroFilho</h2>
+            <div id="quartoEUltimoFilho"></div>
+                <h2>G3.3 quartoEUltimoFilho</h2>
+        </div>
+    </div>
+    <script>
+        //1.Acesse o elemento elementoOndeVoceEsta.
+        let elem1 = document.querySelector('#elementoOndeVoceEsta');
+        console.log('Elem1:', elem1);
+
+        //2.Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        let elem2 = elem1.parentNode;
+        elem2.style.color = 'red';
+        console.log('Elem2:',elem2);
+
+        //3.Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        elem3 = document.querySelector('#primeiroFilhoDoFilho');
+        elem3.innerHTML = '<p>TEXTO ADD ao G4.1</p>';
+        elem3.style.color = 'grey';
+        console.log('Elem3:',elem3);
+
+       //4.Acesse o primeiroFilho a partir de pai.
+       elem4_1 = document.querySelector('#pai').childNodes;
+        console.log('Elem4.1:', elem4_1);
+        elem4_2 = document.querySelector('#pai').firstChild;
+        console.log('Elem4.2:', elem4_2);
+
+
+        //5.Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        elem5_1 = document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+        console.log('Elem5.1:', elem5_1);
+        elem5_2 = document.querySelector('#elementoOndeVoceEsta').previousSibling;
+        console.log('Elem5.2', elem5_2);
+
+        //6.Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.   ????
+        elem6 = document.querySelector('#elementoOndeVoceEsta').lastChild;
+        console.log('Elem6:', elem6);
+
+        //7.Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta. ???
+        elem7 = document.querySelector('#elementoOndeVoceEsta');
+        console.log('Elem7:', elem7);
+
+        //8.Agora acesse o terceiroFilho a partir de pai. ???
+        elem8 = document.querySelector('#pai').lastChild;
+        console.log('Elem7:', elem8);
+        
+    
+    </script>
+</body>
+</html>
