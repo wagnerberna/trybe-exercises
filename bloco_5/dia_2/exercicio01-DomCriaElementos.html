@@ -103,16 +103,13 @@
         let criaLi = document.createElement('li');
         criaLi.innerHTML = itemLista;
         criaUl.appendChild(criaLi);    
-            
         }
-        
-        
-        
-        
-
         //09.Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+        for (count = 1; count <= 3; count +=1) {
         let criaH3 = document.createElement('h3');
-
+        criaH3.innerHTML = 'Texto número:' + count;
+        criaDivMain.appendChild(criaH3);
+        }
 
     </script>
 </body>
