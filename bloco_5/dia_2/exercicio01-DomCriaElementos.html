@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        div {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="corpo">
+    <script>
+      // 01.Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      let criarH1 = document.createElement('h1');
+      criarH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      corpo.appendChild(criarH1);
+      //02.Adicione a tag div com a classe main-content como filho da tag body;
+      let criaDivMain = document.createElement('div');
+      criaDivMain.className = 'main-content';
+      criaDivMain.innerHTML = 'Teste texto div Main';
+      corpo.appendChild(criaDivMain);
+      //03.Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let criaDivCenter = document.createElement('div');
+      criaDivCenter.className = 'center-content';
+      criaDivCenter.innerHTML = 'Teste texto div center';
+      criaDivMain.appendChild(criaDivCenter);
+      //04.Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let criaP = document.createElement('p');
+      criaP.innerHTML = 'Texto Parágrafo div-center';
+      criaDivCenter.appendChild(criaP);
+      //05.Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let criaDivLeft = document.createElement('div');
+      criaDivLeft.className = 'left-content';
+      criaDivLeft.innerHTML = 'Teste Texto Div Left';
+      criaDivMain.appendChild(criaDivLeft);  
+      //06.Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let criaDivRight = document.createElement('div');
+      criaDivRight.className = 'right-content';
+      criaDivRight.innerHTML = '<strong>Teste Texto div Right</strong>';
+      criaDivRight.style.color = 'white';
+      criaDivMain.appendChild(criaDivRight);
+      //07.Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+      let CriaImg = document.createElement('IMG');
+      criaImg.className = 'small-image';
+      criaImg.setAttribute = ('src', 'https://picsum.photos/200');
+      criaDivLeft.appendChild(criaImg);
+
+    </script>
+</body>
+
+</html>
