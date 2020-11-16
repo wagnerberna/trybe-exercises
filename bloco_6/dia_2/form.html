@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Cadastro</legend>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="texto-nome" maxlength="40" placeholder="digite seu nome" required class="input"><br>
+            
+            <label for="mail">e-mail</label>
+            <input type="text" id="mail" name="texto-mail" maxlength="50" required class="input"><br>
+            
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="texto-cpf" maxlength="11" required class="input"><br>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="cpf" name="texto-endereco" maxlength="200"  required class="input" size="100"><br>
+            
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="texto-cidade" maxlength="28" required class="input"><br>
+
+            <label for="estados">Estado:</label>
+            <select name="texto-estados" id="estados">
+            <option value="" disabled selected>Selecione um Estado</option>
+            </select>
+            <br>
+
+            <p>Selecione o tipo de residência</p>
+            <label for="apto"><input type="radio" id="apto" name="residencia" value="ap" checked>Apartamento</label>
+
+            <label for="casa"><input type="radio" id="casa" name="residencia" value="cas">Casa</label><br>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Último Emprego</legend>
+            
+            <label for="resumoEmprego">Resumo Emprego</label>
+            <textarea name="texto-resumo" id="resumoEmprego" cols="30" rows="15" maxlength="1000" required></textarea><br>
+
+            <label for="cargo">cargo</label>
+            <input type="text" id="cargo" name="texto-cargo" maxlength="40" required class="input"><br>
+
+            <label for="cargoDescricao">Descrição do Cargo</label>
+            <input type="text" id="cargoDescricao" name="texto-descricao" maxlength="500" required class="input" size="100"><br>
+
+            <label for="dataInicio">Data de Início</label>
+            <input type="date" id="dataInicio" name="texto-dataInicio"  required class="input" minlength="10" maxlength="10"><br>
+
+            <label for="dataTexto">Data de Início formato texto:</label>
+            <input type="text" id="dataTexto" name="texto-dataInicio" required class="input" minlength="10" maxlength="10"><br>
+
+        </fieldset>
+
+        <button type="reset">Apagar Formulário</button><br>
+        <button type="submit" id="btnEnviar">Enviar</button>
+        </form>
+</body>
+</html>
