@@ -27,7 +27,10 @@
             <label for="cidade">Cidade</label>
             <input type="text" id="cidade" name="texto-cidade" maxlength="28" required class="input"><br>
 
-            <label for="estado">Estado</label>
+            <label for="estados">Estado:</label>
+            <select name="texto-estados" id="estados">
+            <option value="" disabled selected>Selecione um Estado</option>
+            </select>
             <br>
 
             <p>Selecione o tipo de residência</p>
@@ -50,12 +53,15 @@
             <input type="text" id="cargoDescricao" name="texto-descricao" maxlength="500" required class="input" size="100"><br>
 
             <label for="dataInicio">Data de Início</label>
-            <input type="date" id="dataInicio" name="texto-dataInicio"  required class="input"><br>
+            <input type="date" id="dataInicio" name="texto-dataInicio"  required class="input" minlength="10" maxlength="10"><br>
+
+            <label for="dataTexto">Data de Início formato texto:</label>
+            <input type="text" id="dataTexto" name="texto-dataInicio" required class="input" minlength="10" maxlength="10"><br>
 
         </fieldset>
 
         <button type="reset">Apagar Formulário</button><br>
-        <button type="submit">Enviar</button>
+        <button type="submit" id="btnEnviar">Enviar</button>
         </form>
 </body>
 </html>
