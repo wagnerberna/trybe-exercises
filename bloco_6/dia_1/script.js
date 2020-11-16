@@ -15,6 +15,7 @@ criaListaEstados();
 //validar data na hora de enviar add envento ao botão
 let botaoenviar = document.getElementById('btnEnviar');
 
+/*
 botaoenviar.addEventListener('click', function(event) {
   //previne evento padrão
   event.preventDefault();
@@ -43,4 +44,4 @@ for (let index = 0; index < inputsText.length; index += 1) {
     }
   }
 }
-
+*/
