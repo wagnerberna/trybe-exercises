@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma/css/bulma.css">
     <script src="script.js"></script>
 </head>
 <body>
+    <h1 class="title">Cadastro de Currículo</h1>
     <form action="" method="GET">
-        <fieldset>
+        <section class="section">
             <legend>Cadastro</legend>
 
             <label for="nome">Nome</label>
@@ -28,23 +29,25 @@
             <input type="text" id="cidade" name="texto-cidade" maxlength="28" required class="input"><br>
 
             <label for="estados">Estado:</label>
-            <select name="texto-estados" id="estados">
+            <select name="texto-estados" id="estados" class="select">
             <option value="" disabled selected>Selecione um Estado</option>
             </select>
             <br>
 
             <p>Selecione o tipo de residência</p>
-            <label for="apto"><input type="radio" id="apto" name="residencia" value="ap" checked>Apartamento</label>
+            <label class="radio" for="apto">
+                <input type="radio" id="apto" name="residencia" value="ap" checked >Apartamento</label>
 
-            <label for="casa"><input type="radio" id="casa" name="residencia" value="cas">Casa</label><br>
+            <label class="radio" for="casa">
+                <input type="radio" id="casa" name="residencia" value="cas">Casa</label><br>
             
-        </fieldset>
+            </section>
 
-        <fieldset>
+        <section class="section">
             <legend>Dados Último Emprego</legend>
             
             <label for="resumoEmprego">Resumo Emprego</label>
-            <textarea name="texto-resumo" id="resumoEmprego" cols="30" rows="15" maxlength="1000" required></textarea><br>
+            <textarea name="texto-resumo" id="resumoEmprego" cols="30" rows="15" maxlength="1000" required class="textarea"></textarea><br>
 
             <label for="cargo">cargo</label>
             <input type="text" id="cargo" name="texto-cargo" maxlength="40" required class="input"><br>
@@ -58,10 +61,11 @@
             <label for="dataTexto">Data de Início formato texto:</label>
             <input type="text" id="dataTexto" name="texto-dataInicio" required class="input" minlength="10" maxlength="10"><br>
 
-        </fieldset>
-
-        <button type="reset">Apagar Formulário</button><br>
-        <button type="submit" id="btnEnviar">Enviar</button>
-        </form>
+        </section>
+        <section>
+            <button type="reset" class="button is-danger">Apagar Formulário</button><br>
+            <button type="submit" id="btnEnviar" class="button is-success">Enviar</button>
+        </section>
+    </form>
 </body>
 </html>
