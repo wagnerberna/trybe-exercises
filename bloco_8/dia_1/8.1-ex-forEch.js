@@ -1,4 +1,4 @@
-//HOF
+//---forEach
 //--ex1 forEach Array verificação se é par.
 console.log('exemplo1:');
 
@@ -31,17 +31,15 @@ arrayOfValues.forEach((element) => {
   console.log('Cada elemento do array:', element);
 });
 
-//--ex4 map forEach
+//--ex4
 console.log('exemplo4:');
 
-const numeros = [1, 2, 3, 4, 5, 6];
-console.log(numeros.map(numero => numero * 2)); // Retorno: [2, 4, 6, 8, 10, 12]
+const names = ["Bianca", "Camila", "Fernando", "Ana Roberta"];
 
-const paresMenoresQueCinco = [];
-numeros.forEach(numero => {
-  if(numero < 5 && numero % 2 === 0) {
-    paresMenoresQueCinco.push(numero);
-  }
-})
-console.log(paresMenoresQueCinco); // Retorno: [2, 4]
+const convertToUpperCase = (name, index) => {
+  names[index] = name.toUpperCase();
+}
+
+names.forEach(convertToUpperCase);
+console.log(names); // [ 'BIANCA', 'CAMILA', 'FERNANDO', 'ANA ROBERTA' ]
 
