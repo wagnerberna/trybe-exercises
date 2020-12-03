@@ -26,3 +26,5 @@ arrayOfValues.forEach((element) => {
   console.log('Cada elemento do array:', element);
 });
 
+
+
