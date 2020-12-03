@@ -1,5 +1,7 @@
 //filter
 //--ex1 - array números pares
+console.log('exemplo1:');
+
 const numbers = [19, 21, 30, 3, 45, 22, 15];
 // formar refatorada:
 const isEven2 = numbers.filter((number) => number % 2 === 0);
@@ -14,6 +16,8 @@ const isEven = numbers.filter(verifyEven);
 console.log(isEven); // [ 30, 22 ]
 
 //--ex2 - Objetos pessoas menores de 18
+console.log('exemplo2:');
+
 const objPeople = [
   { name: 'José', age: 21 },
   { name: 'Lucas', age: 19 },
@@ -28,7 +32,9 @@ const verifyAgeDrive = (arrayOfPeople) => (
 
 console.log(verifyAgeDrive(objPeople)); // [ { name: 'Maria', age: 16 }, { name: 'Vitor', age: 15 } ]
 
-//---ex3 - remover objeto Ricardo
+//--ex3 - remover objeto Ricardo
+console.log('exemplo3:');
+
 const arrayMyStudents = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
 
 const removeStudentByName = (name, listStudents) => {
