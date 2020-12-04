@@ -54,12 +54,3 @@ const customerInfo3 = ({name, phoneNumber, address, order}) => {
   console.log(`Olá ${delivery.deliveryPerson}, entrega para: ${name}, Telefone: ${phoneNumber}, ${street, number, apartment}`);
 }
 customerInfo3(order);
-
-
-//saída deve ser: "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00." 
-const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-
-}
-
-orderModifier(order);
