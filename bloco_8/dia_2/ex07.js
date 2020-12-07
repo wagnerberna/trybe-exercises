@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { allowedNodeEnvironmentFlags } = require('process');
 
 const books = [
   {
@@ -67,7 +68,14 @@ const expectedResult = 'O Senhor dos Anéis';
 
 //Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (terminam com um ponto). 
 function authorWith3DotsOnName() {
-  // escreva seu código aqui
+  const filterBooks = books.filter(({author}) => {
+    const splitName = author.name.split(' ', 3); //limite de 3 itens no array
+    console.log(splitName);
+    return splitName.every((book) => books.author.name.length === 2);
+    
+  });
+  console.log(filterBooks);
 }
 
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+authorWith3DotsOnName();
+//assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
