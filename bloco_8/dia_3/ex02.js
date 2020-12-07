@@ -67,12 +67,12 @@ const books = [
 //Crie uma string com os nomes de todas as pessoas autoras. 
 function allNames() {
   let retorno;
-  //array books passado como segundo parâmetro (current) e 'Nomes' como accumulator.
-  retorno = books.reduce((accumulator, books, index, array) => {
+  //array book passado como segundo parâmetro (current) e 'Nomes' como accumulator.
+  retorno = books.reduce((accumulator, book, index, array) => {
     if (index === array.length -1) {
-      return `${accumulator} ${books.author.name}.`;  
+      return `${accumulator} ${book.author.name}.`;  
     }
-    return `${accumulator} ${books.author.name},`;
+    return `${accumulator} ${book.author.name},`;
     }, 'Nomes:');
   console.log(retorno);
   return retorno;
