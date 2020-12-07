@@ -13,6 +13,6 @@ function flatten() {
   return arrays.reduce((result, current) => {
     return result.concat(current);
   }, [])
-}
+};
 
 assert.deepStrictEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
