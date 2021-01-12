@@ -4,6 +4,8 @@ const uppercase = (str, callback) => {
   callback(str.toUpperCase());
 }
 
+console.log(uppercase)
+
 it(`Teste conversão para maiúsculo`, (done) => {
   uppercase('test', (str) => {
     expect(str).toBe('TEST');
