@@ -19,6 +19,9 @@ const findAnimalsByType = (type) => (
   })
 );
 
+console.log (findAnimalsByType('cat'));
+
+
 const getListAnimals = (type) => (
   findAnimalsByType(type).then(list => list)
 );
