@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from "react-router-dom";
+
 import './App.css';
-import Header from './ComponentsB11/Header';
-import SaudacaoInicial from './ComponentsB11/Mensagens';
-import ListaBikes from './ComponentsB11/ListaBikes';
-import { bikesData } from './ComponentsB11/data';
+import ContentLinks from './Components/ContentLinks';
+import ContentRoute from './Components/ContentRoute';
 
 class App extends Component {
   render() {
     return (
-      <>
-      <Header />
-      <SaudacaoInicial />
-      <ListaBikes listaBikesProps={bikesData} />
-      </>
+      <BrowserRouter>
+        <ContentLinks />
+        <ContentRoute />
+      </BrowserRouter>
     );
   }
 }
-
-// {acessoDiretoBikes(bikes)}
-
-// function acessoDiretoBikes(bikes) {
-//   return console.log(bikes)
-  // console.log(bikes[0].name)
-// }
 
 export default App;

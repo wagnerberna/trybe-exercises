@@ -17,11 +17,11 @@ class Saudacao extends Component {
     return (
       <section>
         {`Bem vindo, ${comprador.nome} ${comprador.sobrenome},
-        A soma da sua compra é ${soma(10,5)}`}
+        A soma da sua compra com Frete(100) é ${soma(bikePromo.price,100)}`}
         <div>
           <h2>Nossa Bike em promoção é:</h2>
           <h3>{bikePromo.name}</h3>
-          <img className='img' src={bikePromo.picture} alt="imagem bike"/> <br/>
+          <img className="img" src={bikePromo.picture} alt="imagem bike"/> <br/>
           <span>Cor: {bikePromo.color} </span>
           <span>R$ {bikePromo.price}</span>
         </div>

@@ -6,16 +6,3 @@ body {
   color:rgb(223, 219, 219);
   font-family: sans-serif;
 }
-
-#destaque {
-  color: gold;
-  background-color: rgb(0, 0, 0);
-}
-
-.titulos {
-  color:rgb(157, 205, 243)
-}
-
-.img {
-  width: 300px;
-}
