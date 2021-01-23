@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import './B12.css';
 
-class B12 extends Component {
+class B12R extends Component {
   constructor() {
     super()
 
-    this.handleonChangeNome = this.handleonChangeNome.bind(this)
+    this.handleonChange = this.handleonChange.bind(this)
 
     this.state = {
       nome: '',
@@ -16,25 +16,34 @@ class B12 extends Component {
     }
   }
 
-  // uma função para cada estado:
-  handleonChangeNome(event) {
-    this.setState({ nome: event.target.value })
+  // Função Genérica
+  //desestruturando o evento pegando o target
+  handleonChange({target}) {
+    //desestruturando o target
+    const { name, value } = target;
+    // console.log(name, value);
+
+    // função para manipular o estado
+    this.setState({ 
+      //pega o name e valor do target e joga para o estado
+      [name]: value
+    })
   }
 
   render() {
-    //desestrutura os estados
-    // const { nome, sobrenome, idade, descricao } = this.state;
+    const { nome, sobrenome, idade, descricao } = this.state;
 
     return(
       <section>
       <h1>Formulário de Cadastro:</h1>
+      <h2>- Refatorado</h2>
       <form className="forms">
         <label>
           Nome:
           <input
             name="nome"
             type="text"
-            value={this.state.nome}
+            value={nome}
             onChange={this.handleonChange}
           />
         </label>
@@ -43,7 +52,7 @@ class B12 extends Component {
           <input 
             name="sobrenome"
             type="text"
-            value={this.state.sobrenome}
+            value={sobrenome}
             onChange={this.handleonChange}
           />
         </label>
@@ -52,7 +61,7 @@ class B12 extends Component {
           <input 
             name="idade"
             type="number"
-            value={this.state.idade}
+            value={idade}
             onChange={this.handleonChange}
           />
         </label>
@@ -60,7 +69,7 @@ class B12 extends Component {
           Sua descrição:
           <textarea
             name="descricao"
-            value={this.state.descricao}
+            value={descricao}
             onChange={this.handleonChange}
           />
         </label>
@@ -70,4 +79,4 @@ class B12 extends Component {
   }
 }
 
-export default B12;
+export default B12R;
