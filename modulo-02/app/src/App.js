@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter } from "react-router-dom";
 
 import './App.css';
-import ContentLinks from './Components/ContentLinks';
-import ContentRoute from './Components/ContentRoute';
+import ContentLinks from './components/ContentLinks';
+import ContentRoute from './components/ContentRoute';
 
 class App extends Component {
   render() {
