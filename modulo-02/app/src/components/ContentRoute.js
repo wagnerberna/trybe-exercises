@@ -11,6 +11,9 @@ import B13Dog from '../componentsB13API/B13Dog';
 import B13DogR from '../componentsB13API/B13DogR';
 import B13Pai from '../componentsB13Pai/B13Pai';
 import B13Route from '../componentsB13Route/B13';
+import B13RD from '../componentsB13RouteD/B13RD';
+import B13PokeRoute from '../componentsB13PokeRoute/B13';
+import B13Rev from '../componentsB13Rev/B13Rev.js';
 
 class ContentRoute extends Component {
   render() {
@@ -28,6 +31,9 @@ class ContentRoute extends Component {
           <Route path="/componentsB13Pai/B13Pai" component={ B13Pai } />
           <Route path="/componentsB13Pai/B13Pai" component={ B13Pai } />
           <Route path="/componentsB13Route/B13" component={ B13Route } />
+          <Route path="/componentsB13RouteD/B13RD" component={ B13RD} />
+          <Route path="/componentsB13PokeRoute/B13" component={ B13PokeRoute } />
+          <Route path="/componentsB13Rev/B13Rev" component={ B13Rev } />
         </Switch>
       </main>
     );

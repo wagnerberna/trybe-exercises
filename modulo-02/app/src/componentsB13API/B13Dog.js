@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// localStorage armazena URL das imagens dos dogs
 class B13Dog extends Component {
   constructor(props) {
     console.log('1-construtor')
@@ -12,6 +13,7 @@ class B13Dog extends Component {
     this.saveDog = this.saveDog.bind(this);
   }
 
+  //execulta após a montagem dos componentes após carregar o render
   componentDidMount() {
     console.log('3-DidMount')
     this.fetchDog();

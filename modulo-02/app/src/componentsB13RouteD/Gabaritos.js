@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-class Gabarito extends Component {
+class Gabaritos extends Component {
   render(){
     const { availableGabaritosDias } = this.props;
     // console.log(availableGabaritosDias)
@@ -10,7 +11,10 @@ class Gabarito extends Component {
         <h1>Gabarito</h1>
         <ul>
           {availableGabaritosDias.map(el => (
-          <li key={ el }>{el}</li>
+          <li key={ el }>
+          <Link to={ `/Gabarito/${el}` }>{el}</Link>
+          {/* {console.log(el)} */}
+          </li>
         ))}
         </ul>
       </section>
@@ -18,8 +22,8 @@ class Gabarito extends Component {
   }
 }
 
-Gabarito.propTypes ={
+Gabaritos.propTypes ={
   availableGabaritosDias: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
-export default Gabarito;
+export default Gabaritos;
