@@ -3,7 +3,7 @@ import { LOGIN } from '../consts';
 const INITIAL_STATE = {
   username: '',
   // password: '',
-  // isLogged: false
+  isLogged: false
 }
 
 function userEstado(state = INITIAL_STATE, action){
@@ -12,7 +12,7 @@ function userEstado(state = INITIAL_STATE, action){
       return { ...state,
         username: action.payload.nome,
         // password: action.payload.password,
-        // isLogged: action.payload.isLogged
+        isLogged: true,
       }
     default:
       return state;

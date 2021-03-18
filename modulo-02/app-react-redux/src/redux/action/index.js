@@ -4,7 +4,7 @@ export function loginDados(nome){
   return({
     type: LOGIN,
     payload: {
-      nome
+      nome,
       // username: nome,
       // password: senha,
       // islogged: true,
