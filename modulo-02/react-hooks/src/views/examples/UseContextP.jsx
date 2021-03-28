@@ -1,15 +1,15 @@
-import React, { useContext, useState } from 'react'
-import PageTitle from '../../components/layout/PageTitle'
+import React from 'react';
+import PageTitle from '../../components/layout/PageTitle';
 
-import MoviesContext from '../../data/movieContext';
+import { MoviesContext } from '../../../src/contextMovies/movieContext';
 
-import DataContext from '../../data/DataContext'
-
-const UseContext = (props) => {
-
-    // const { dataMovies } = useContext(MoviesContext);
-
+const UseContextP = (props) => {
+    console.log('teste');
     return (
+        // <h1>bla bla bla</h1>
+        <MoviesContext.Consumer>
+            {(value) => {
+
         <div className="UseContext">
             <PageTitle
                 title="Hook UseContext"
@@ -21,15 +21,15 @@ const UseContext = (props) => {
             
             <div className="center">
                 <button className="btn"
-                onClick={() => console.log()}
+                onClick={() => console.log(value.moviesState)}
                 > 
                 Lista dos Filmes
                 </button>
             </div>
-
-
         </div>
+            }}
+        </MoviesContext.Consumer>
     )
 }
 
-export default UseContext;
+export default UseContextP;

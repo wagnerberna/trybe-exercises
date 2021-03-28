@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const dataMovies = [
-// const dataMovies = [
   {
     title: 'Kingsglaive',
     subtitle: 'Final Fantasy XV',
@@ -38,7 +37,6 @@ export const dataMovies = [
     imagePath: 'images/Resident_Evil_Vendetta.jpg',
   },
 ];
-// export default dataMovies;
 
 export const DataContext = React.createContext(dataMovies);
 

@@ -12,18 +12,18 @@ import UseMemo from '../../views/examples/UseMemo'
 import UseContext from '../../views/examples/UseContext'
 import UseReducer from '../../views/examples/UseReducer'
 import UseCustom from '../../views/examples/UseCustom'
-import UseContextProvider from '../../views/examples/UseContextP'
+import useContextP from '../../views/examples/UseContextP'
 
 const Content = props => (
     <main className="Content">
         <Switch>
             <Route exact path="/"><Home /> </Route>
+            <Route path="/useContextP" component={useContextP} />
             <Route path="/useState"><UseState /></Route>
             <Route path="/useEffect"><UseEffect /></Route>
             <Route path="/useRef"><UseRef /></Route>
             <Route path="/useCallback"><UseCallback /></Route>
             <Route path="/useMemo"><UseMemo /></Route>
-            <Route path="/useContextP"><UseContextProvider /></Route>
             <Route path="/useContext"><UseContext /></Route>
             <Route path="/useReducer"><UseReducer /></Route>
             <Route path="/useCustom"><UseCustom /></Route>

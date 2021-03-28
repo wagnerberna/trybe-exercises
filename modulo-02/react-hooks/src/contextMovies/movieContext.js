@@ -1,21 +1,19 @@
-// import React, { useState, createContext } from 'react';
-// import  dataMovies from './DataContext';
+import React, { useState, createContext } from 'react';
+import  dataMovies from './Data';
 
-// const initialState = {
-// dataMovies
-// }
+const initialState = {
+dataMovies
+}
 
-// export const MoviesContext = createContext(initialState);
+export const MoviesContext = createContext(initialState);
 
-// const MoviesProvider = (props) => {
+export const MoviesProvider = (props) => {
 
-//   const[moviesState, setMovies] = useState(MoviesContext);
+  const[moviesState, setMovies] = useState(MoviesContext);
 
-//   return (
-//     <MoviesContext.Provider value ={ {moviesState, setMovies} }>
-//       { props.children }
-//     </MoviesContext.Provider>
-//   )
-// }
-
-// export default MoviesProvider;
+  return (
+    <MoviesContext.Provider value ={ {moviesState, setMovies} }>
+      { props.children }
+    </MoviesContext.Provider>
+  )
+}
