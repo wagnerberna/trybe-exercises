@@ -2,13 +2,15 @@ import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Contents from './route/Content';
 
-import Home from './pages/Home';
+import ProviderMain from './contextMain/ProviderMain';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Contents />
-    </BrowserRouter>
+    <ProviderMain>
+      <BrowserRouter>
+        <Contents />
+      </BrowserRouter>
+    </ProviderMain>
   );
 }
 

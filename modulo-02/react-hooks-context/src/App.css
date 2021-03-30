@@ -22,3 +22,7 @@
 .NavBar a:hover {
   color: rgb(128, 255, 0);
 }
+
+.form {
+  /* display: inline-block; */
+}

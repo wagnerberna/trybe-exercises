@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
   return(
-    <header className='Header'>
+    <header className="Header">
       <h1>Hooks - Context</h1>
     </header>
   )
