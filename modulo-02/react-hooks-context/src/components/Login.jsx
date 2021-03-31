@@ -3,14 +3,23 @@ import { Redirect } from 'react-router';
 import ContextMain from '../contextMain/ContextMain';
 
 function Login() {
-  const { login, handleLogin, logged, setLogged } = useContext(ContextMain);
+  const { login, setLogin, logged, setLogged } = useContext(ContextMain);
   // console.log(ContextMain);
+
+    const handleLogin = ({ target: { name, value } }) => {
+    setLogin({
+      ...login,
+      [name]: value,
+    })
+  }
 
   function btnLoginCheck(email, age) {
     const ageMin = 12;
     const ageMinCheck = (age >= ageMin);
-    const emailCheck = (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email));
-    if (ageMinCheck || emailCheck) return false;
+    const emailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+    const emailCheck = emailRegex.test(email);
+    // console.log(emailCheck);
+    if (ageMinCheck && emailCheck) return false;
     return true;
   }
 

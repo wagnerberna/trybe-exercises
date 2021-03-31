@@ -10,31 +10,40 @@ function ProviderMain({ children }) {
   });
   const [resultRickAPI, setResultRickAPI] = useState([]);
   const [logged, setLogged] = useState(false);
+  const [inputSearchName, setInputSearchName] = useState('');
+  const [rickFiltered, setRickFiltered] = useState([]);
 
   async function getResultRickAPI() {
       const resultAPI = await getRickAPI();
       setResultRickAPI(resultAPI);
-    }
+      setRickFiltered(resultAPI);
+  }
 
   useEffect(() => {
     getResultRickAPI();
   }, []);
   
-  const handleLogin = ({ target: { name, value } }) => {
-    setLogin({
-      ...login,
-      [name]: value,
-    })
-  }
-  
+  useEffect(() => {
+    setRickFiltered(searchNameFilter);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inputSearchName]);
+
+  const searchNameFilter = 
+  resultRickAPI.filter(({ name }) => name.toLowerCase().includes(inputSearchName));
+
+
   const allContext = {
     login,
-    handleLogin,
+    setLogin,
     logged,
     setLogged,
     resultRickAPI,
-
+    inputSearchName,
+    setInputSearchName,
+    rickFiltered,
+    setRickFiltered,
   };
+
   return(
     <ContextMain.Provider value={ allContext }>
       { children }
