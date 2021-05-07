@@ -31,7 +31,6 @@ function ProviderMain({ children }) {
   const searchNameFilter = 
   resultRickAPI.filter(({ name }) => name.toLowerCase().includes(inputSearchName));
 
-
   const allContext = {
     login,
     setLogin,

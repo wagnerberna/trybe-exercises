@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS TrybeDB;
+USE TrybeDB;
+
+CREATE table BeTrybe(
+    id int,
+    cidade VARCHAR(50)
+);
+
+SHOW COLUMNS FROM BeTrybe;
+
+ALTER TABLE BeTrybe ADD COLUMN data_fundacao DATE;
+
+ALTER TABLE BeTrybe ADD COLUMN estado VARCHAR(50) AFTER cidade;
+
+ALTER TABLE BeTrybe MODIFY estado CHAR(2) NOT NULL;
+
+ALTER TABLE BeTrybe MODIFY id INT PRIMARY KEY AUTO_INCREMENT;
+
+ALTER TABLE BeTrybe CHANGE id betrybe_id INT;
+
+ALTER TABLE BeTrybe DROP COLUMN estado;
