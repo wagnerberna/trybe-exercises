@@ -1,0 +1,23 @@
+{
+  "name": "hello-node",
+  "version": "0.0.1",
+  "description": "Primeira Aplica;'ao Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "teste": "node teste.js"
+  },
+  "keywords": [
+    "node",
+    "aula",
+    "teste"
+  ],
+  "author": "wagner <xxx@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "isoddmaster": "^1.0.0",
+    "number-oddoreven": "^1.0.4",
+    "readline-sync": "^1.4.10"
+  }
+}
