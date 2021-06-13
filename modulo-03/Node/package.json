@@ -16,7 +16,9 @@
   "author": "wagner <xxx@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "isoddmaster": "^1.0.0",
+    "nodemon": "^2.0.7",
     "number-oddoreven": "^1.0.4",
     "readline-sync": "^1.4.10"
   }
