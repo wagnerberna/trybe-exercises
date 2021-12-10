@@ -6,7 +6,7 @@ function mensagem(): void {
 
 mensagem();
 
-// fn recebe 2 num eretorna um "number"
+// fn recebe 2 num e retorna um "number"
 function soma(numA: number, numB: number): number {
   console.log("soma A + B");
   return numA + numB;

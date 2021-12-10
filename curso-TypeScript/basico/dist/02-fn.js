@@ -5,7 +5,7 @@ function mensagem() {
     console.log("Olá Mundo");
 }
 mensagem();
-// fn recebe 2 num eretorna um "number"
+// fn recebe 2 num e retorna um "number"
 function soma(numA, numB) {
     console.log("soma A + B");
     return numA + numB;

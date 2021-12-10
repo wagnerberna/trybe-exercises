@@ -11,10 +11,16 @@ console.log(user("Wagner b"));
 // var tipos: any, number, string, boolean
 const coringa = "teste var coringa";
 console.log(coringa);
-// Union Types: "|" OU
+// Union Types: "|"
+// Se puder receber 2 tipos
+// tipo number ou string
 let nota = 10;
 nota = "10";
 console.log(`Nota: ${nota}`);
+// Type não permite atribuir valor null só se for definido
+// usado para dados opcionais
+const alturaOpcional = null;
+console.log(`altura igual: ${alturaOpcional} metros`);
 // array de strings
 console.log("Array:");
 const hobbies = ["correr", "ler"];
@@ -56,3 +62,11 @@ const usuario2 = {
     idade: 18,
 };
 console.log(usuario2);
+console.log("valores nulos");
+const contato1 = {
+    nome: "Wagner",
+    tel1: "99887766",
+    tel2: null,
+};
+console.log(contato1);
+console.log(contato1.tel2);
