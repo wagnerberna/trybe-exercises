@@ -30,8 +30,11 @@ const turmaA = ["Bruce", "Clark", "Diana"];
 const turmaB = ["Barry", "Arthur"];
 const turmaC = ["Barry", ...turmaA];
 const turmasAB = [...turmaA, ...turmaB];
+const turmaTeste = [];
+turmaTeste.push(...turmaA);
 console.log(turmaC);
 console.log(turmasAB);
+console.log(turmaTeste);
 // ...rest: juntar, agrupar parâmetros
 console.log("...rest operator:");
 // passa quantos argumentos quiser
@@ -57,5 +60,36 @@ function tuplaParam2(...params) {
     console.log(`2) ${params[0]} ${params[1]} ${params[2]}`);
 }
 tuplaParam2(...tupla);
-// destructuring
+// destructuring (desestruturar array)
 console.log("destructuring:");
+const caracteristicas = ["motor Zetec 1.8", 2020];
+// forma tradicional:
+const motorTipo = caracteristicas[0];
+const anoFabricacao = caracteristicas[1];
+const [motor, ano] = caracteristicas;
+console.log(motor, ano);
+// atribuindo valor e desestruturando
+const [W, A] = [40, 20];
+console.log(W, A);
+// destructuring (desestruturar objeto)
+const item = {
+    nome: "SSD 512GB",
+    preco: "200",
+};
+// forma tradicional:
+const nomeItem = item.nome;
+const precoItem = item.preco;
+const { nome, preco } = item;
+console.log(nome, preco);
+// Alias
+const { nome: N, preco: P } = item;
+console.log(N, P);
+// template string
+console.log("template literals");
+const userGroup = "Suporte";
+const accessLevel = "1";
+const boasVindas = `
+  Boas Vindas ${userGroup},
+  Nível de acesso: ${parseInt(accessLevel) >= 2 ? "Não Confidencial" : "Confidencial"}
+`;
+console.log(boasVindas);
