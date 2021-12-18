@@ -2,6 +2,8 @@
 // Modificadores de Acesso: Public / Private
 // Atributo privado não pode ser definido
 //  só pode ser alterado pela própria classe carro internamente
+// atributos e métodos por padrão não são transmitodos por herança, acesso de forma indireta
+// Protected: transmite método por herança e tb é privado, nível alto de proteção
 class Carro {
     // no construtor ficam os param. q a classe vai receber
     constructor(marca, modelo, velocidadeMaxima = 200) {
@@ -34,4 +36,20 @@ class Carro {
         return this.alterarVelocidade(-5);
     }
 }
-const carro1 = new carro("Ferr");
+console.log("Classe Carro:");
+const carro1 = new Carro("Ferrari", "C300", 250);
+console.log(carro1.acelerar());
+console.log(carro1.acelerar());
+console.log(carro1.acelerar());
+console.log(carro1.frear());
+console.log(carro1.acelerar());
+// fill método para preencher o array com o valor indicado
+Array(50)
+    .fill(0)
+    .forEach(() => console.log(carro1.acelerar()));
+console.log(carro1.acelerar());
+console.log(carro1);
+Array(60)
+    .fill(0)
+    .forEach(() => console.log(carro1.frear()));
+console.log(carro1.frear());
