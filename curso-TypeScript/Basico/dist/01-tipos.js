@@ -6,30 +6,28 @@ function user(name) {
 console.log("teste-Basico");
 console.log(user("Wagner b"));
 // TIPOS:
-// declarar var coringa recebe qualquer valor
-// sem especificar o tipo ou atribuir valor inicial ts entende como any
-// var tipos: any, number, string, boolean
-const coringa = "teste var coringa";
-console.log(coringa);
+// any: var coringa
+let coringa = "teste var coringa";
+console.log(`var coringa: ${coringa}`);
+coringa = 29;
+console.log(`var coringa: ${coringa}`);
 // Union Types: "|"
-// Se puder receber 2 tipos
-// tipo number ou string
+// tipo number OU string
 let nota = 10;
 nota = "10";
 console.log(`Nota: ${nota}`);
-// Type não permite atribuir valor null só se for definido
-// usado para dados opcionais
+//null: p/ dados opcionais
 const alturaOpcional = null;
 console.log(`altura igual: ${alturaOpcional} metros`);
 // array de strings
 console.log("Array:");
 const hobbies = ["correr", "ler"];
 console.log(hobbies[1]);
-// Tuplas: Array com posições definidas
+// Tuplas: C/ posições de tipos definidos
 console.log("Tuplas:");
 const endereco = ["Av. Principal", 99, "RS"];
 console.log(endereco);
-// Enums: enumeração ex: dias da semana, gênero, etc...
+// Enums: enumeração
 console.log("Enums:");
 var cores;
 (function (cores) {
@@ -39,7 +37,7 @@ var cores;
 })(cores || (cores = {}));
 console.log(cores);
 console.log(cores[1]);
-// Enums atribuindo valores, altera o index
+// Enums atribuindo valores
 var cores2;
 (function (cores2) {
     cores2[cores2["Azul"] = 0] = "Azul";
@@ -50,19 +48,20 @@ var cores2;
 console.log(cores2);
 console.log(cores2[100]);
 console.log(cores2.verde);
+// objetos
 console.log("Objetos:");
 const usuario = {
     nome: "Wagner",
     idade: 40,
 };
 console.log(usuario);
-// ":" atribui o tipo da variável
 const usuario2 = {
     nome: "Aline",
     idade: 18,
 };
 console.log(usuario2);
-console.log("valores nulos");
+// criar tipo de objeto reutilizável
+console.log("Criar tipo de objeto:");
 const contato1 = {
     nome: "Wagner",
     tel1: "99887766",
@@ -70,3 +69,10 @@ const contato1 = {
 };
 console.log(contato1);
 console.log(contato1.tel2);
+const contato2 = {
+    nome: "Aline",
+    tel1: "99554433",
+    tel2: null,
+};
+console.log(contato2);
+console.log(contato2.tel2);

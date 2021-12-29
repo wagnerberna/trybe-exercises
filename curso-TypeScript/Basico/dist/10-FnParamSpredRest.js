@@ -1,6 +1,5 @@
 "use strict";
 // parametro definindo valor padrão
-console.log("definir param. padrão");
 function contagemRegressiva(inicio = 3) {
     console.log(inicio);
     while (inicio > 0) {
@@ -8,6 +7,7 @@ function contagemRegressiva(inicio = 3) {
         console.log(inicio);
     }
 }
+console.log("definir param. padrão");
 contagemRegressiva();
 console.log("-----");
 contagemRegressiva(5);
@@ -37,8 +37,6 @@ console.log(turmasAB);
 console.log(turmaTeste);
 // ...rest: juntar, agrupar parâmetros
 console.log("...rest operator:");
-// passa quantos argumentos quiser
-// se tiver mais de 1 param. o rest têm de ser o último
 function retornaArray(...args) {
     return args;
 }

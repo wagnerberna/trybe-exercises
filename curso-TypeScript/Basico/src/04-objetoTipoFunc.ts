@@ -1,4 +1,3 @@
-console.log("tipo funcionário:");
 // Criar o tipo "Alias" p/ ser reutilizado:
 type Funcionario = {
   supervisores: string[];
@@ -12,6 +11,8 @@ const funcionario01: Funcionario = {
     return "Passou do horário";
   },
 };
+
+console.log("Objeto tipo funcionário:");
 console.log(funcionario01);
 console.log(funcionario01.supervisores);
 console.log(funcionario01.baterPonto(9));

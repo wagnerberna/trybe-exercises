@@ -1,5 +1,4 @@
 // parametro definindo valor padrão
-console.log("definir param. padrão");
 function contagemRegressiva(inicio = 3): void {
   console.log(inicio);
   while (inicio > 0) {
@@ -8,6 +7,7 @@ function contagemRegressiva(inicio = 3): void {
   }
 }
 
+console.log("definir param. padrão");
 contagemRegressiva();
 console.log("-----");
 contagemRegressiva(5);
@@ -43,8 +43,7 @@ console.log(turmaTeste);
 
 // ...rest: juntar, agrupar parâmetros
 console.log("...rest operator:");
-// passa quantos argumentos quiser
-// se tiver mais de 1 param. o rest têm de ser o último
+
 function retornaArray(...args: number[]): number[] {
   return args;
 }
@@ -58,6 +57,7 @@ console.log(numeros2);
 
 // spread / rest c/ tuplas
 console.log("spread / rest c/ tuplas:");
+
 const tupla: [number, string, boolean] = [1, "abc", false];
 
 function tuplaParam1(a: number, b: string, c: boolean): void {

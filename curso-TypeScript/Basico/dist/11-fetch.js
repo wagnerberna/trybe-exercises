@@ -61,7 +61,7 @@ function fetchApi04(url) {
 // FN para chamar API
 const rickAndMorty = (url) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const resultApi = yield fetchApi01(url);
+        const resultApi = yield fetchApi04(url);
         console.log(resultApi);
         console.log(resultApi[0]);
         console.log(resultApi[0].name);

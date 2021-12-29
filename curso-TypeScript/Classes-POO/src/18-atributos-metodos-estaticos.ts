@@ -1,5 +1,4 @@
-// static: atributos e métodos estatáticos, pertencem a classe
-// e não a instância
+// static: atributos e métodos estatáticos
 class Matematica {
   static PI = 3.1416;
 

@@ -1,9 +1,4 @@
-// Getters e Setters: acessa como atributo público
-// pode ser usado o get e set em um objeto sem ser classe
-// usado para fazer algum tipo de validação, ou processamento do atributo
-// get: buscar valor / set: setar valor
-// "_" simboliza q é um atributo privado
-// Privado: não acessa direto, somente via metodo interno da classe
+// Getters e Setters: acessa como atributo
 class Pessoa {
   private _idade = 0;
 

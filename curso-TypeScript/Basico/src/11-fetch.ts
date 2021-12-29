@@ -49,7 +49,7 @@ async function fetchApi04(url: string) {
 // FN para chamar API
 const rickAndMorty = async (url: string) => {
   try {
-    const resultApi = await fetchApi01(url);
+    const resultApi = await fetchApi04(url);
     console.log(resultApi);
     console.log(resultApi[0]);
     console.log(resultApi[0].name);

@@ -1,12 +1,8 @@
-// never sem retorno não termina da forma esperada
-//  diferente do void usado p/ erros
-console.log("Tratamento de erro:");
+// never sem retorno p/ erros
 function falha(msg: string): never {
   throw new Error(msg);
 }
 
-// trim() retira espaços vazios
-// se não tem nome ou nome é vazio
 const produto = {
   nome: "Boneco",
   preco: 50,
@@ -20,4 +16,5 @@ const produto = {
   },
 };
 
+console.log("tratamento de erro FN never:");
 produto.validarProduto();

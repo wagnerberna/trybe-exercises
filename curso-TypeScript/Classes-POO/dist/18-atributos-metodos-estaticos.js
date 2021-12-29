@@ -1,6 +1,5 @@
 "use strict";
-// static: atributos e métodos estatáticos, pertencem a classe
-// e não a instância
+// static: atributos e métodos estatáticos
 class Matematica {
     static areaCirc(raio) {
         return this.PI * raio * raio;

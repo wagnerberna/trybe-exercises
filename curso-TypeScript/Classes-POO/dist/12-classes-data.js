@@ -1,9 +1,7 @@
 "use strict";
 class Data {
     // construtor inicializa as variáveisp/ instância da classe
-    // parametro tipado:
-    // constructor(dia: number, mes: number, ano: number) {
-    // parametro c/ valor padrão:
+    // parametro tipado c/ valor padrão:
     // constructor(dia: number = 1, mes: number = 1, ano: number = 1980) {
     constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
