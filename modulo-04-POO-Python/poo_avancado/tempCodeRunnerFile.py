@@ -1,1 +1,0 @@
-HomoSapiens.especies().split(",")
